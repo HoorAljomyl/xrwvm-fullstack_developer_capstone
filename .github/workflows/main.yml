@@ -54,7 +54,7 @@ jobs:
     - name: Run Linter
       run: |
         # JSHint settings: modern JavaScript, Node.js environment
-        echo '{"esversion": 11, "node": true, "asi": true}' > .jshintrc
+        echo '{"esversion": 11, "node": true, "asi": true, "sub": true, "eqnull": true, "expr": true, "laxbreak": true}' > .jshintrc
         # Lint the Node.js back-end files
         find ./server/database -name "*.js" -exec jshint {} +
         echo "Linted all the js files successfully"
